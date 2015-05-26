@@ -31,3 +31,4 @@ node_modules
 
 # ===== Begin custom entries =====
 random.js # This is where I test out code before implementing it
+.env # heroku config vars
