@@ -1,16 +1,17 @@
 var winston = require('winston');
 winston.emitErrs = true;
 var config = require('./config.js');
+var dbURL = config.db.url();
 require('winston-pushbullet').Pushbullet;
 require('winston-mongodb').MongoDB;
 
 var logger = new winston.Logger({
   levels: {
-    error: 0,
-    warn: 1,
+    error: 4,
+    warn: 3,
     info: 2,
-    debug: 3,
-    trace: 4,
+    debug: 1,
+    trace: 0,
   },
   colors: {
     error: 'red',
@@ -24,11 +25,9 @@ var logger = new winston.Logger({
 
       level: 'info',
       silent: false,
-      db: config.db.host,
+      db: dbURL,
       options: {
-        db: {
-          native_parser: true
-        },
+        db: config.db.url,
         server: {
           poolSize: 2,
           socketOptions: {

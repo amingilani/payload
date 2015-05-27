@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var logger = require('./config/logger.js');
 
 /* Bills. */
 router.get('/bills', function(req, res, next) {
