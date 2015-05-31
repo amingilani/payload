@@ -1,12 +1,21 @@
-// Bills are payment requests addressed to specific buyers. Bill line items have fixed prices, typically denominated in fiat currency. 
+// Bills are payment requests addressed to specific buyers. Bill line items have fixed prices, typically denominated in fiat currency.
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var itemSchema = new Schema({
-  "description": String, // Line item description
-  "price": Number, // Line item unit price, in `currency`
-  "quantity": Number // Line item number of units
+  "description": { // Line item description
+    type: String,
+    required: true
+  },
+  "price": { // Line item unit price, in `currency`
+    type: Number,
+    required: true
+  },
+  "quantity": { // Line item number of units
+    type: Number,
+    required: true
+  }
 }, {
   _id: false
 });
@@ -18,7 +27,11 @@ var billSchema = new Schema({
   "delivered": Boolean, // Indicates whether bill has been delivered to buyer
   "number": String, // Bill identifier, specified by merchant
   "status": String, // Can be `draft`, `sent`, `paid`, or `complete`
-  "currency": String, // ISO 4217 3-character currency code
+  "currency": { // ISO 4217 3-character currency code
+    type: String,
+    required: true,
+    default: "PKR" // default is PKR
+  },
   "showRate": Boolean, //Indicates whether corresponding invoice web page should display equivalent fiat amount
   "archived": Boolean, // Indicates whether bill is visible in BitPay website
   "name": String, // Buyer Name
