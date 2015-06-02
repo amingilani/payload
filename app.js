@@ -4,15 +4,24 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+var mongoose = require('mongoose');
+var config = require('./config/config.js');
+var dbUrl = config.db.url();
+console.log(dbUrl);
+mongoose.connect(dbUrl);
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var apiRouter = require('./routes/api');
+var routes = require('./routes/routes');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+// passport configuration
+require('./config/passport/user.js')(passport);
 
 // trust the proxy for client ip
 app.set('trust proxy');
@@ -25,8 +34,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/api', apiRouter);
 app.use('/', routes);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

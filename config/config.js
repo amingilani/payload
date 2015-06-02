@@ -1,13 +1,9 @@
 var config = {};
 
-// Mailman config
-config.production = process.env.production === 'true'; //exists here only for
-// reference hardcoded in template is the `process.env.production` variable
+config.production = process.env.production === 'true'; //exists here only for documentation purposes
 config.secret = process.env.secret;
-config.domainSite = process.env.domainsite; // e.g. the.mailman.ninja
-// for http://the.mailman.ninja/
-config.domainMail = process.env.domainmail; // e.g. mailman.ninja
-// for mailman@mailman.ninja
+config.domainSite = process.env.domainsite;
+config.domainMail = process.env.domainmail;
 
 
 // Mailgun config

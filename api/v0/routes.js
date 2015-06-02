@@ -2,9 +2,14 @@ var express = require('express');
 var router = express.Router();
 var logger = require('./config/logger.js');
 var mongoose = require('mongoose');
+var Bill = require('./models/bill.js');
+var User = require('../../models/bill.js');
+
+/**** Users *****/
+
 
 /**** Bills. *****/
-var Bill = require('./models/bill.js');
+
 
 // GET a list of all the bills for the caller
 router.get('/bills', function(req, res) {
