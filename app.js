@@ -8,7 +8,6 @@ var passport = require('passport');
 var mongoose = require('mongoose');
 var config = require('./config/config.js');
 var dbUrl = config.db.url();
-console.log(dbUrl);
 mongoose.connect(dbUrl);
 
 var apiRouter = require('./routes/api');
@@ -34,8 +33,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// routes
 app.use('/api', apiRouter);
 app.use('/', routes);
+
+//launchpad demo
+require('./demo/routes.js').app(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

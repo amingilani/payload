@@ -1,0 +1,38 @@
+/* CSS used here will be applied after bootstrap.css */
+
+#checkout-box {
+  height: 1000px;
+  background-color: gray;
+}
+.address-qrcode {
+  display: block;
+  margin: 50px auto;
+}
+div#checkout-box p {
+  display: block;
+  margin: 50px auto;
+  font-size: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.product-name {
+  font-weight: bold;
+}
+.price-fiat {
+  font-style: italic;
+}
+div.invoice-paid{
+  height: 400px;
+  width: : 400px;
+  display: block;
+  margin: 50px auto;
+  text-align: center;
+  background-color:green;
+}
+
+span {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 150%;
+}

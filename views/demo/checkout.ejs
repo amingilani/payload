@@ -1,0 +1,36 @@
+<% include includes/header.ejs %>
+  <style>
+  .done{
+    display:inline-block;
+    text-decoration:none;
+    text-align:center;
+  }
+  </style>
+  <section>
+    <div class="container">
+
+
+      <div class="row">
+        <div id="checkout-box" class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-4">
+          <div class="row">
+              <img class="address-qrcode" src="https://chart.googleapis.com/chart?cht=qr&chs=400x400&chl=bitcoin%3A13VcNwGxhz7rHk4PRFTHBn2cpq7eLLZ6zs" />
+              <p class="address-text">13VcNwGxhz7rHk4PRFTHBn2cpq7eLLZ6zs</p>
+              <p class="product-name">Jimmy Choo Knockoffs</p>
+              <p class="price price-btc">0.043585 BTC</p>
+              <p class="price price-fiat">1000 PKR</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+    socket.on('boom', function() {
+      $('.address-qrcode').replaceWith( '<div class="invoice-paid"><span><i class="fa fa-check-square-o fa-lg"></i> done</span></div>' );
+      console.log('boom');
+    });
+  </script>
+  </script>
+  <% include includes/footer.ejs %>

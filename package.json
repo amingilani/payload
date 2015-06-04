@@ -26,6 +26,7 @@
     "passport-local": "^1.0.0",
     "passport-localapikey": "0.0.3",
     "serve-favicon": "~2.2.1",
+    "socket.io": "^1.3.5",
     "winston": "^1.0.0",
     "winston-mongodb": "^1.1.1",
     "winston-pushbullet": "^0.1.0"
