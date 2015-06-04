@@ -32,18 +32,16 @@ module.exports.io = function(io) {
     });
 
     var
-    amount = req.body.amount,
-    client = "Samandari Shoes",
-    address = req.body.address;
+      amount = req.body.amount,
+      client = "Samandari Shoes",
+      address = req.body.address;
 
     request.post(
       'http://paybot.payload.pk/payload/tx?token=' + token, {
         form: {
-          payload: {
-            "amount": amount,
-            "client": client,
-            "address": address
-          }
+          "amount": amount,
+          "client": client,
+          "address": address
         }
       },
       function(error, response, body) {
