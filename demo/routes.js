@@ -6,7 +6,7 @@ var jwt = require('jsonwebtoken');
 var hookSecret = process.env.WEBHOOK_SECRET;
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
-  service: 'mailgun',
+  service: 'Mailgun',
   auth: {
     user: process.env.MG_USER,
     pass: process.env.MG_PASS
