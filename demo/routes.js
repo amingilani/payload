@@ -66,6 +66,9 @@ module.exports.io = function(io) {
       text: 'Hello Samandar Khan\n' + "You've recieved a new order for" +
       "Jimmy Choo Knockoffs worth 1000 PKR. I've credited your account.\n" +
       "-Paybot"
+    }, function (err, info) {
+      if (err) console.log(err);
+      console.log(info);
     });
 
     res.send("boomed!");
