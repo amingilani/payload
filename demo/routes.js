@@ -4,6 +4,14 @@ var passport = require('passport');
 var request = require('request');
 var jwt = require('jsonwebtoken');
 var hookSecret = process.env.WEBHOOK_SECRET;
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+  service: 'mailgun',
+  auth: {
+    user: process.env.MG_USER,
+    pass: process.env.MG_PASS
+  }
+});
 
 /* sign-up */
 router.get('/', function(req, res, next) {
@@ -50,6 +58,15 @@ module.exports.io = function(io) {
         }
       }
     );
+
+    transporter.sendMail({
+      from: 'paybot@letter.payload.pk',
+      to: 'aminshahgilani+demo@gmail.com',
+      subject: 'New Order',
+      text: 'Hello Samandar Khan\n' + "You've recieved a new order for" +
+      "Jimmy Choo Knockoffs worth 1000 PKR. I've credited your account.\n" +
+      "-Paybot"
+    });
 
     res.send("boomed!");
   });
