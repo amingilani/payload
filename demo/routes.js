@@ -60,8 +60,8 @@ module.exports.io = function(io) {
     );
 
     transporter.sendMail({
-      from: 'paybot@letter.payload.pk',
-      to: 'aminshahgilani+demo@gmail.com',
+      from: 'Paybot <paybot@letter.payload.pk>',
+      to: 'Amin Shah Gilani <aminshahgilani+demo@gmail.com>',
       subject: 'New Order',
       text: 'Hello Samandar Khan\n' + "You've recieved a new order for" +
       "Jimmy Choo Knockoffs worth 1000 PKR. I've credited your account.\n" +
