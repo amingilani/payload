@@ -5,7 +5,7 @@
 }
 #checkout-box {
   height: 1000px;
-  background-color: gray;
+  background-color: #555;
 }
 .address-qrcode {
   display: block;
