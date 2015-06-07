@@ -1,5 +1,8 @@
 /* CSS used here will be applied after bootstrap.css */
 
+#feedback-form-parent{
+  height: 700px;
+}
 #checkout-box {
   height: 1000px;
   background-color: gray;
