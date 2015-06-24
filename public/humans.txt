@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Amin Shah Gilani -- @amingilani
+    Sulaiman Khan    -- @sulykhan
+    Zakra Chachar    -- @zakrachachar
+    Paybot           -- https://github.com/payloadpk/paybot
+
+# THANKS
+
+    Open source software
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Nodejs, Expressjs, jQuery, Modernizr, Normalize.css, Bootstrap

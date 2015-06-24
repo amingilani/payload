@@ -1,41 +1,26 @@
-/* CSS used here will be applied after bootstrap.css */
-
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
 #feedback-form-parent{
   height: 700px;
 }
-#checkout-box {
-  height: 1000px;
-  background-color: #555;
-}
-.address-qrcode {
-  display: block;
-  margin: 50px auto;
-}
-div#checkout-box p {
-  display: block;
-  margin: 50px auto;
-  font-size: 100%;
-  text-align: center;
+
+
+
+
+#attrib-icons li {
   font-weight: bold;
-}
-.product-name {
-  font-weight: bold;
-}
-.price-fiat {
-  font-style: italic;
-}
-div.invoice-paid{
-  height: 400px;
-  width: 400px;
-  display: block;
-  margin: 50px auto;
+  display: inline-block;
   text-align: center;
-  background-color:green;
 }
 
-span {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 150%;
+#attrib-icons li img {
+  margin: 5px;
+  width: 100px;
 }
