@@ -1,43 +1,133 @@
 <% include includes/header.ejs %>
+<style>
+  body {
+    background: #47b6d4;
+    color: white;
+    position: absolute;
+    top: 50%;
+    margin-top: -200px;
+    /* half of #content height*/
+    left: 0;
+    width: 100%;
+  }
+  /* unvisited link */
+  a:link {
+    color: #8de7ff;
+  }
 
+  /* visited link */
+  a:visited {
+    color: #8de7ff;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: #8de7ff;
+  }
+
+  /* selected link */
+  a:active {
+    color: #8de7ff;
+  }
+
+  @media (min-width: 970px) {
+    .section-left {
+      border-right: 4px solid;
+      border-color: white;
+    }
+    .section-right {
+      margin-top: 15px;
+    }
+    hr.appearing {
+      display: none;
+    }
+  }
+  hr {
+    border: 2px solid;
+    border-color: white;
+  }
+
+  .section-left img {
+    width: 36px;
+    margin-top: 5px;
+  }
+
+  .section-right img {
+    margin-bottom: 15px;
+  }
+
+  .content-stuff {
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="row">
-						<div class="col-md-12">
-							<h3>
-								h3. Lorem ipsum dolor sit amet.
-							</h3>
-							<p>
-								Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<h3>
-								h3. Lorem ipsum dolor sit amet.
-							</h3>
-							<p>
-								Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="row">
-						<div class="col-md-12">
-							<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
-							<p>
-								Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<% include includes/footer.ejs %>
+  <div class="content-stuff">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row section-left">
+              <div class="col-md-12">
+                <h3>
+                  Hi There!
+                </h3>
+                <p>
+                  We're under construction at the moment
+                  <br>
+                    but we'll be up and running soon!
+                  </p>
+                  <hr>
+                    <h3>
+                      Till Then:
+                    </h3>
+                    <p>
+                      Keep up to date with our progress
+                      <br>
+                        <a href="https://facebook.com/payloadpk"><img alt="facebook" src="/img/fb.png"/></a>
+                        &nbsp;
+                        <a href="https://twitter.com/payloadpk"><img alt="twitter" src="/img/twitter.png"/></a>
+                      </p>
+                      <p>
+                        Learn about Bitcoin on this really cool site:
+                        <br>
+                          <a href="https://www.weusecoins.com/">weusecoins.com</a>
+                        </p>
+                        <p>
+                          Ask us a question, or three!
+                          <br>
+                            <a href="mailto:hey@payload.pk">hey@payload.pk</a>
+                          </p>
+                          <hr class="appearing">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row section-right">
+                        <div class="col-md-12">
+                          <img alt="Payload" src="/img/logo-white-sm.png"/>
+                          <p>
+                            Payload uses the already awesome technology of Bitcoin: a virtual currency that
+                            makes your life easier.
+                          </p>
+                          <p>
+                            Our mission is to help you make free instant and safe transactions through the
+                            power of Bitcoin. Payload helps you buy, sell, and transfer Bitcoin.
+                          </p>
+                          <p>
+                            With a Payload account, you can tap into the bitcoin network and transfer money
+                            around anywhere in the world, for free!
+                          </p>
+                          <p>
+                            pre-register to be part of our
+                            <a href="http://goo.gl/forms/1JKUXnyiWO">Private Beta.</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% include includes/footer.ejs %>
