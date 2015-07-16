@@ -7,6 +7,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Payload' });
 });
 
+router.get('/beta', function(req, res, next) {
+  res.redirect('/');
+});
+
 /* Sign up*/
 router.post('/signup', passport.authenticate('local-signup', {
     successRedirect : '/profile', // redirect to the secure profile section
